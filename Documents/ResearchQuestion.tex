@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{authblk}
+\usepackage{url}
+
+\title{Machine Learning and Credit Default}
+
+\author[1]{Tom O'Connell}
+\author[2]{Thomas Birkner}
+\author[3]{Theyab Alrashidi}
+
+\affil[1]{Arizona State University, Tempe, AZ 85281, USA }
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Broad Question/Background}
+
+Lending is crucial for a bank to operate and while banks try to refuse loans to risky clients, their approval process is not faultless. The two most critical questions in the banking industry are (i) How risky is the borrower? and (ii) Given the borrower's risk, should we lend him/her~\cite{madaan2021loan}? Recent surveys show that credit institutions are increasingly adopting Machine Learning (ML) tools in several areas of credit risk management, like regulatory capital calculation, optimizing provisions, credit-scoring or monitoring outstanding loans~\cite{alonso2021understanding}. \textbf{Therefore, our aim is to analyze the accuracy of different predictive models in predicting  credit default.} 
+ 
+The early identification of customers who display a significant risk of falling into default may help lending organizations prevent bad loans and also encourage clients to better manage their personal finances~\cite{cocser2019predictive}.
+
+
+\subsection{Sub-Question: Is there a correlation between default and a borrower's education level?}
+
+There are numerous factors that can affect the likelihood of defaulting on a loan. While the more obvious factors include income and number of dependents, one that is often overlooked is the borrower's education level. Important questions to ask include: 'How do default rates of dropouts compare to those of graduates, and how does this relationship vary by degree program?' and 'Do default rates differ by college type?'~\cite{chakrabarti2017more}.
+
+
+\subsection{Sub-Question: What profession has the highest amount of defaults?}
+
+Given the drastically different levels of income in different professions, it is reasonable to assume there may be a correlation between the probability of default and the occupation of the borrower. A lot of professions, especially in the Medicine industry, require additional time in school which in turn, increases the likelihood of a borrower taking out student loans. While most Doctors and Dentists have enormous salaries, their additional time in school can drastically increase their student loans therefore increasing risk of default. The most in debt career is Occupational Therapists who on average have \$204,846 in student debt despite salaries ranging from \$60,000 to \$80,000~\cite{hornsby_2024}.
+
+
+\section{Preliminary Data}
+
+The most comprehensive data source we have identified is from Home Credit via the Kaggle database~\cite{home-credit-default-risk}. Home Credit uses many alternative forms of data in order to predict their clients' repayment abilities such as telco and transactional information. Using this extensive database, we can evaluate numerous demographic and economic factors of borrower's and see how they affect the likelihood of default
+
+\section{Preliminary Methods}
+
+We will apply various machine learning (ML) algorithms to develop three predictive models using classifiers such as: Logistic Regression, Decision Tree Classifier, and Random Classifier. Due to the fact that our data is not balanced, we need to use various sampling techniques such as \textbf{RandomOverSampler} and \textbf{SMOTE} to get the best possible outputs from the ML models. To evaluate the different classification models, we used the following five metrics: Accuracy, Precision, Recall, F1 Score, and AUC Score. 
+
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+
+\end{document}
